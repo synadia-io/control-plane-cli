@@ -12,6 +12,7 @@ syn-cp [flags]
   -h, --help            help for syn-cp
       --server string   Synadia Control Plane Server
       --token string    Synadia Control Plane Auth Token
+  -v, --version         version for syn-cp
 ```
 
 ## See Also
