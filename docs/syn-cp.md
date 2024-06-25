@@ -2,8 +2,31 @@
 
 Interact with the Synadia Control Plane
 
+**Synopsis**
+
+Interact with the Synadia Control Plane
+
+This cli requires the server URL (example: https://cloud.synadia.com) and a token. The token may be generated at <server url>/profile/personal-access-tokens.
+All flags may be set in environment variables with SCP_ prefix.
+
 ```
 syn-cp [flags]
+```
+
+**Examples**
+
+```
+
+# Set environment variables for server url and authentication:
+export SCP_SERVER=https://cloud.synadia.com
+export SCP_TOKEN=uat_demo
+
+# List Accounts
+syn-cp account list
+
+# Import all NSC systems along with users and accounts
+syn-cp system import --all --users
+
 ```
 
 **Options**
