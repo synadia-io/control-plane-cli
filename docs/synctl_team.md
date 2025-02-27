@@ -1,15 +1,15 @@
-# synctl account
+# synctl team
 
-Interact with accounts
+Interact with teams
 
 ```
-synctl account [flags]
+synctl team [flags]
 ```
 
 **Options**
 
 ```
-  -h, --help   help for account
+  -h, --help   help for team
 ```
 
 **Options inherited from parent commands**
@@ -25,39 +25,12 @@ synctl account [flags]
       --token string               Synadia Control Plane Auth Token
 ```
 
-## synctl account export
+## synctl team list
 
-Export account seeds from Control Plane
-
-```
-synctl account export [ACCOUNT_ID] [flags]
-```
-
-**Options**
+List Control Plane teams
 
 ```
-  -h, --help   help for export
-```
-
-**Options inherited from parent commands**
-
-```
-      --account string             Synadia Control Plane Account ID
-      --context string             Use the Control Plane context
-      --context-directory string   Synadia Context Directory (default "/home/seth/.config/synadia/contexts")
-      --no-context                 Disable the selected context
-      --server string              Synadia Control Plane Server
-      --system string              Synadia Control Plane System ID
-      --team string                Synadia Control Plane Team ID
-      --token string               Synadia Control Plane Auth Token
-```
-
-## synctl account list
-
-List Control Plane accounts
-
-```
-synctl account list [flags]
+synctl team list [flags]
 ```
 
 **Options**
