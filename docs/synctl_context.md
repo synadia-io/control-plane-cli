@@ -1,15 +1,11 @@
-# synctl system
+# synctl context
 
-interact with systems
-
-```
-synctl system [flags]
-```
+Manage Control Plane contexts
 
 **Options**
 
 ```
-  -h, --help   help for system
+  -h, --help   help for context
 ```
 
 **Options inherited from parent commands**
@@ -25,18 +21,76 @@ synctl system [flags]
       --token string               Synadia Control Plane Auth Token
 ```
 
-## synctl system export
+## synctl context add
 
-export system seeds from control plane
+Add a context
 
 ```
-synctl system export [SYSTEM_ID] [flags]
+synctl context add NAME [flags]
 ```
 
 **Options**
 
 ```
-  -h, --help   help for export
+  -a, --account string       Synadia Cloud account ID
+  -d, --description string   Context Description
+  -h, --help                 help for add
+  -s, --system string        Synadia Cloud system ID
+  -t, --team string          Synadia Cloud team ID
+```
+
+**Options inherited from parent commands**
+
+```
+      --context string             Use the Control Plane context
+      --context-directory string   Synadia Context Directory (default "/home/seth/.config/synadia/contexts")
+      --no-context                 Disable the selected context
+      --server string              Synadia Control Plane Server
+      --token string               Synadia Control Plane Auth Token
+```
+
+## synctl context copy
+
+Copy a context
+
+```
+synctl context copy NAME TEMPLATE [flags]
+```
+
+**Options**
+
+```
+  -a, --account string       Synadia Cloud account ID
+  -d, --description string   Context Description
+  -h, --help                 help for copy
+  -s, --system string        Synadia Cloud system ID
+  -t, --team string          Synadia Cloud team ID
+```
+
+**Options inherited from parent commands**
+
+```
+      --context string             Use the Control Plane context
+      --context-directory string   Synadia Context Directory (default "/home/seth/.config/synadia/contexts")
+      --no-context                 Disable the selected context
+      --server string              Synadia Control Plane Server
+      --token string               Synadia Control Plane Auth Token
+```
+
+## synctl context edit
+
+Edit a context
+
+```
+synctl context edit NAME [flags]
+```
+
+**Options**
+
+```
+  -d, --description string   Context Description
+  -h, --help                 help for edit
+  -i, --interactive          Interactively edit in $EDITOR
 ```
 
 **Options inherited from parent commands**
@@ -52,23 +106,18 @@ synctl system export [SYSTEM_ID] [flags]
       --token string               Synadia Control Plane Auth Token
 ```
 
-## synctl system import
+## synctl context info
 
-Import system into Control Plane
+Show information about a context
 
 ```
-synctl system import [flags]
+synctl context info [NAME] [flags]
 ```
 
 **Options**
 
 ```
-      --all                import all accounts from an operator
-  -h, --help               help for import
-      --js-disabled        disable jetstream for the imported system
-      --js-domain string   set jetstream domain for the imported system
-  -t, --team string        team id for system
-      --users              import users during account import
+  -h, --help   help for info
 ```
 
 **Options inherited from parent commands**
@@ -80,77 +129,103 @@ synctl system import [flags]
       --no-context                 Disable the selected context
       --server string              Synadia Control Plane Server
       --system string              Synadia Control Plane System ID
-      --token string               Synadia Control Plane Auth Token
-```
-
-## synctl system import-account
-
-Import account into an existing Control Plane system
-
-```
-synctl system import-account [flags]
-```
-
-**Options**
-
-```
-      --all             import all accounts from an operator
-  -h, --help            help for import-account
-  -s, --system string   system id
-      --users           import users during account import
-```
-
-**Options inherited from parent commands**
-
-```
-      --account string             Synadia Control Plane Account ID
-      --context string             Use the Control Plane context
-      --context-directory string   Synadia Context Directory (default "/home/seth/.config/synadia/contexts")
-      --no-context                 Disable the selected context
-      --server string              Synadia Control Plane Server
       --team string                Synadia Control Plane Team ID
       --token string               Synadia Control Plane Auth Token
 ```
 
-## synctl system import-user
+## synctl context list
 
-Import user into an existing Control Plane system and account
-
-```
-synctl system import-user [flags]
-```
-
-**Options**
+List contexts
 
 ```
-  -h, --help            help for import-user
-  -s, --system string   system id
-```
-
-**Options inherited from parent commands**
-
-```
-      --account string             Synadia Control Plane Account ID
-      --context string             Use the Control Plane context
-      --context-directory string   Synadia Context Directory (default "/home/seth/.config/synadia/contexts")
-      --no-context                 Disable the selected context
-      --server string              Synadia Control Plane Server
-      --team string                Synadia Control Plane Team ID
-      --token string               Synadia Control Plane Auth Token
-```
-
-## synctl system list
-
-List Control Plane systems
-
-```
-synctl system list [flags]
+synctl context list [flags]
 ```
 
 **Options**
 
 ```
   -h, --help   help for list
+```
+
+**Options inherited from parent commands**
+
+```
+      --account string             Synadia Control Plane Account ID
+      --context string             Use the Control Plane context
+      --context-directory string   Synadia Context Directory (default "/home/seth/.config/synadia/contexts")
+      --no-context                 Disable the selected context
+      --server string              Synadia Control Plane Server
+      --system string              Synadia Control Plane System ID
+      --team string                Synadia Control Plane Team ID
+      --token string               Synadia Control Plane Auth Token
+```
+
+## synctl context remove
+
+Remove a context
+
+```
+synctl context remove NAME [flags]
+```
+
+**Options**
+
+```
+  -h, --help   help for remove
+```
+
+**Options inherited from parent commands**
+
+```
+      --account string             Synadia Control Plane Account ID
+      --context string             Use the Control Plane context
+      --context-directory string   Synadia Context Directory (default "/home/seth/.config/synadia/contexts")
+      --no-context                 Disable the selected context
+      --server string              Synadia Control Plane Server
+      --system string              Synadia Control Plane System ID
+      --team string                Synadia Control Plane Team ID
+      --token string               Synadia Control Plane Auth Token
+```
+
+## synctl context select
+
+Select a context
+
+```
+synctl context select NAME [flags]
+```
+
+**Options**
+
+```
+  -h, --help   help for select
+```
+
+**Options inherited from parent commands**
+
+```
+      --account string             Synadia Control Plane Account ID
+      --context string             Use the Control Plane context
+      --context-directory string   Synadia Context Directory (default "/home/seth/.config/synadia/contexts")
+      --no-context                 Disable the selected context
+      --server string              Synadia Control Plane Server
+      --system string              Synadia Control Plane System ID
+      --team string                Synadia Control Plane Team ID
+      --token string               Synadia Control Plane Auth Token
+```
+
+## synctl context unselect
+
+Unselect current context
+
+```
+synctl context unselect [flags]
+```
+
+**Options**
+
+```
+  -h, --help   help for unselect
 ```
 
 **Options inherited from parent commands**
