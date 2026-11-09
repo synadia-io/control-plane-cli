@@ -6,8 +6,13 @@ Interact with Synadia Control Plane
 
 Interact with Synadia Control Plane
 
-This cli requires the server URL (example: https://cloud.synadia.com) and a token. The token may be generated at <server URL>/profile/personal-access-tokens.
+This CLI requires the server URL and a token.
+The token may be generated at https://cloud.synadia.com/profile/personal-access-tokens.
+
 All flags may be set in environment variables with SCP_ prefix.
+
+The default config directory is $XDG_CONFIG_HOME/synadia/synctl.
+The full path to the config file can be overridden using the SCP_CONFIG environment variable.
 
 ```
 synctl [flags]
@@ -17,21 +22,21 @@ synctl [flags]
 
 ```
 
-# Set environment variables for server url and authentication:
-export SCP_SERVER=https://cloud.synadia.com
-export SCP_TOKEN=uat_demo
+  # Set environment variables for server url and authentication:
+  export SCP_SERVER=https://cloud.synadia.com
+  export SCP_TOKEN=uat_demo
 
-# Create a context
-synctl context add cloud
-synctl context select cloud
+  # Create a context
+  synctl context add cloud
+  synctl context select cloud
 
-# List Teams, Systems, and Accounts
-synctl team list
-synctl system list
-synctl account list
+  # List teams, systems, and accounts
+  synctl team list
+  synctl system list
+  synctl account list
 
-# Import all NSC systems along with users and accounts
-synctl system import --all --users
+  # Import all NSC systems along with users and accounts
+  synctl system import --all --users
 
 ```
 
@@ -40,13 +45,14 @@ synctl system import --all --users
 ```
       --account string             Synadia Control Plane Account ID
       --context string             Use the Control Plane context
-      --context-directory string   Synadia Context Directory (default "/home/seth/.config/synadia/contexts")
+      --context-directory string   Synadia Context Directory (default "<user-config-dir>/synadia/contexts")
   -h, --help                       help for synctl
       --no-context                 Disable the selected context
       --server string              Synadia Control Plane Server
       --system string              Synadia Control Plane System ID
       --team string                Synadia Control Plane Team ID
       --token string               Synadia Control Plane Auth Token
+  -V, --verbose count              Verbose output (-V for request URLs, -VV for full request/response bodies)
   -v, --version                    version for synctl
 ```
 

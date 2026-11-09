@@ -13,12 +13,13 @@ Manage Control Plane contexts
 ```
       --account string             Synadia Control Plane Account ID
       --context string             Use the Control Plane context
-      --context-directory string   Synadia Context Directory (default "/home/seth/.config/synadia/contexts")
+      --context-directory string   Synadia Context Directory (default "<user-config-dir>/synadia/contexts")
       --no-context                 Disable the selected context
       --server string              Synadia Control Plane Server
       --system string              Synadia Control Plane System ID
       --team string                Synadia Control Plane Team ID
       --token string               Synadia Control Plane Auth Token
+  -V, --verbose count              Verbose output (-V for request URLs, -VV for full request/response bodies)
 ```
 
 ## synctl context add
@@ -43,10 +44,11 @@ synctl context add NAME [flags]
 
 ```
       --context string             Use the Control Plane context
-      --context-directory string   Synadia Context Directory (default "/home/seth/.config/synadia/contexts")
+      --context-directory string   Synadia Context Directory (default "<user-config-dir>/synadia/contexts")
       --no-context                 Disable the selected context
       --server string              Synadia Control Plane Server
       --token string               Synadia Control Plane Auth Token
+  -V, --verbose count              Verbose output (-V for request URLs, -VV for full request/response bodies)
 ```
 
 ## synctl context copy
@@ -71,10 +73,11 @@ synctl context copy NAME TEMPLATE [flags]
 
 ```
       --context string             Use the Control Plane context
-      --context-directory string   Synadia Context Directory (default "/home/seth/.config/synadia/contexts")
+      --context-directory string   Synadia Context Directory (default "<user-config-dir>/synadia/contexts")
       --no-context                 Disable the selected context
       --server string              Synadia Control Plane Server
       --token string               Synadia Control Plane Auth Token
+  -V, --verbose count              Verbose output (-V for request URLs, -VV for full request/response bodies)
 ```
 
 ## synctl context edit
@@ -98,12 +101,13 @@ synctl context edit NAME [flags]
 ```
       --account string             Synadia Control Plane Account ID
       --context string             Use the Control Plane context
-      --context-directory string   Synadia Context Directory (default "/home/seth/.config/synadia/contexts")
+      --context-directory string   Synadia Context Directory (default "<user-config-dir>/synadia/contexts")
       --no-context                 Disable the selected context
       --server string              Synadia Control Plane Server
       --system string              Synadia Control Plane System ID
       --team string                Synadia Control Plane Team ID
       --token string               Synadia Control Plane Auth Token
+  -V, --verbose count              Verbose output (-V for request URLs, -VV for full request/response bodies)
 ```
 
 ## synctl context info
@@ -125,12 +129,13 @@ synctl context info [NAME] [flags]
 ```
       --account string             Synadia Control Plane Account ID
       --context string             Use the Control Plane context
-      --context-directory string   Synadia Context Directory (default "/home/seth/.config/synadia/contexts")
+      --context-directory string   Synadia Context Directory (default "<user-config-dir>/synadia/contexts")
       --no-context                 Disable the selected context
       --server string              Synadia Control Plane Server
       --system string              Synadia Control Plane System ID
       --team string                Synadia Control Plane Team ID
       --token string               Synadia Control Plane Auth Token
+  -V, --verbose count              Verbose output (-V for request URLs, -VV for full request/response bodies)
 ```
 
 ## synctl context list
@@ -152,12 +157,13 @@ synctl context list [flags]
 ```
       --account string             Synadia Control Plane Account ID
       --context string             Use the Control Plane context
-      --context-directory string   Synadia Context Directory (default "/home/seth/.config/synadia/contexts")
+      --context-directory string   Synadia Context Directory (default "<user-config-dir>/synadia/contexts")
       --no-context                 Disable the selected context
       --server string              Synadia Control Plane Server
       --system string              Synadia Control Plane System ID
       --team string                Synadia Control Plane Team ID
       --token string               Synadia Control Plane Auth Token
+  -V, --verbose count              Verbose output (-V for request URLs, -VV for full request/response bodies)
 ```
 
 ## synctl context remove
@@ -179,12 +185,13 @@ synctl context remove NAME [flags]
 ```
       --account string             Synadia Control Plane Account ID
       --context string             Use the Control Plane context
-      --context-directory string   Synadia Context Directory (default "/home/seth/.config/synadia/contexts")
+      --context-directory string   Synadia Context Directory (default "<user-config-dir>/synadia/contexts")
       --no-context                 Disable the selected context
       --server string              Synadia Control Plane Server
       --system string              Synadia Control Plane System ID
       --team string                Synadia Control Plane Team ID
       --token string               Synadia Control Plane Auth Token
+  -V, --verbose count              Verbose output (-V for request URLs, -VV for full request/response bodies)
 ```
 
 ## synctl context select
@@ -206,12 +213,13 @@ synctl context select NAME [flags]
 ```
       --account string             Synadia Control Plane Account ID
       --context string             Use the Control Plane context
-      --context-directory string   Synadia Context Directory (default "/home/seth/.config/synadia/contexts")
+      --context-directory string   Synadia Context Directory (default "<user-config-dir>/synadia/contexts")
       --no-context                 Disable the selected context
       --server string              Synadia Control Plane Server
       --system string              Synadia Control Plane System ID
       --team string                Synadia Control Plane Team ID
       --token string               Synadia Control Plane Auth Token
+  -V, --verbose count              Verbose output (-V for request URLs, -VV for full request/response bodies)
 ```
 
 ## synctl context unselect
@@ -233,11 +241,12 @@ synctl context unselect [flags]
 ```
       --account string             Synadia Control Plane Account ID
       --context string             Use the Control Plane context
-      --context-directory string   Synadia Context Directory (default "/home/seth/.config/synadia/contexts")
+      --context-directory string   Synadia Context Directory (default "<user-config-dir>/synadia/contexts")
       --no-context                 Disable the selected context
       --server string              Synadia Control Plane Server
       --system string              Synadia Control Plane System ID
       --team string                Synadia Control Plane Team ID
       --token string               Synadia Control Plane Auth Token
+  -V, --verbose count              Verbose output (-V for request URLs, -VV for full request/response bodies)
 ```
 
